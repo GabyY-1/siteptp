@@ -4,158 +4,374 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#eaf8ff">
-  <title>PaperTaPeur — Téléchargements</title>
-  <meta name="description" content="Télécharge PaperTaPeur sur ordinateur, téléphone ou joue directement dans ton navigateur.">
-  <link rel="stylesheet" href="style.css?v=1">
+  <meta name="color-scheme" content="light">
+  <title>PaperTaPeur — Site officiel</title>
+  <meta name="description" content="Site officiel de PaperTaPeur : joue dans ton navigateur et retrouve les futures versions PC et mobile.">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-  <div class="bg-grid"></div>
+  <div class="page-bg" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+  </div>
 
   <header class="topbar">
-    <a class="brand" href="./">
-      <div class="brand-mark"><span></span><span></span></div>
-      <div>
+    <a class="brand" href="#top" aria-label="PaperTaPeur">
+      <span class="brand-logo"><i></i><i></i></span>
+      <span class="brand-copy">
         <strong>PaperTaPeur</strong>
-        <small>TÉLÉCHARGEMENTS</small>
-      </div>
+        <small>SITE OFFICIEL</small>
+      </span>
     </a>
-    <nav>
+
+    <nav class="desktop-nav" aria-label="Navigation principale">
       <a href="#versions">Versions</a>
+      <a href="#features">Fonctionnalités</a>
       <a href="#installation">Installation</a>
-      <a class="play-link" href="https://gabyy-1.github.io/PaperTaPeur/">JOUER</a>
+      <a href="#faq">FAQ</a>
     </nav>
+
+    <a class="nav-play" href="https://gabyy-1.github.io/PaperTaPeur/">
+      <span class="live-dot"></span> JOUER
+    </a>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">PAPERTAPEUR COMPÉTITIF</div>
-        <h1>Joue où tu veux.</h1>
-        <p>Ordinateur, téléphone ou navigateur. Choisis ta plateforme et retrouve le même compte, les mêmes rangs et le multijoueur.</p>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> SAISON 1 · COMPÉTITIF</div>
+        <h1>Conquiers.<br><em>Domine.</em><br>Recommence.</h1>
+        <p class="hero-text">PaperTaPeur est un jeu de conquête de territoire rapide et compétitif. Joue maintenant sur ordinateur dans ton navigateur, puis retrouve les versions installables dès leur sortie.</p>
+
         <div class="hero-actions">
-          <a class="primary" href="#versions">CHOISIR MA VERSION</a>
-          <a class="secondary" href="https://gabyy-1.github.io/PaperTaPeur/">JOUER DANS LE NAVIGATEUR</a>
+          <a class="btn btn-primary" href="https://gabyy-1.github.io/PaperTaPeur/">
+            <span>JOUER MAINTENANT</span>
+            <b>→</b>
+          </a>
+          <a class="btn btn-secondary" href="#versions">VOIR LES VERSIONS</a>
         </div>
-        <div class="mini-pills">
-          <span>8 joueurs</span><span>Multijoueur privé</span><span>Classements</span><span>Cross-plateforme</span>
+
+        <div class="hero-status">
+          <div><b>8</b><span>JOUEURS MAX</span></div>
+          <div><b>4</b><span>MODES</span></div>
+          <div><b>3</b><span>CARTES</span></div>
+          <div><b>∞</b><span>PARTIES</span></div>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="device desktop">
-          <div class="screen">
-            <div class="fake-top"></div>
-            <div class="fake-grid">
-              <span></span><span></span><span></span>
+      <div class="hero-stage reveal delay-1">
+        <div class="stage-glow"></div>
+        <div class="game-window">
+          <div class="window-head">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>PAPERTAPEUR · CLASSÉ</span>
+            <b>EN LIGNE</b>
+          </div>
+          <div class="game-preview">
+            <div class="preview-grid"></div>
+
+            <div class="territory territory-blue"></div>
+            <div class="territory territory-pink"></div>
+            <div class="territory territory-yellow"></div>
+
+            <div class="paper paper-main"><i></i><i></i></div>
+            <div class="trail trail-main"></div>
+
+            <div class="paper paper-enemy"><i></i><i></i></div>
+
+            <div class="hud-card hud-rank">
+              <small>RANG ACTUEL</small>
+              <strong>II · ARGENT</strong>
+              <span><i></i></span>
             </div>
-            <div class="fake-player"></div>
+
+            <div class="hud-card hud-score">
+              <small>TERRITOIRE</small>
+              <strong>42.7%</strong>
+            </div>
+
+            <div class="preview-board">
+              <small>CLASSEMENT</small>
+              <p><b>1</b> GabyY <span>42.7%</span></p>
+              <p><b>2</b> Player <span>31.2%</span></p>
+              <p><b>3</b> Nova <span>18.5%</span></p>
+            </div>
           </div>
         </div>
-        <div class="device phone">
-          <div class="screen"><div class="fake-player small"></div></div>
+
+        <div class="float-card card-left">
+          <span class="tiny-icon">◆</span>
+          <div><small>MATCH PRIVÉ</small><strong>2–8 joueurs</strong></div>
+        </div>
+        <div class="float-card card-right">
+          <span class="tiny-icon yellow">▲</span>
+          <div><small>PROGRESSION</small><strong>7 rangs</strong></div>
         </div>
       </div>
     </section>
 
-    <section id="versions" class="versions-section">
-      <div class="section-title">
+    <section class="trust-strip">
+      <div class="shell trust-inner">
+        <span>JOUABLE SANS TÉLÉCHARGEMENT</span>
+        <i></i>
+        <span>PROGRESSION SAUVEGARDÉE</span>
+        <i></i>
+        <span>MULTIJOUEUR PRIVÉ</span>
+        <i></i>
+        <span>MISES À JOUR GRATUITES</span>
+      </div>
+    </section>
+
+    <section id="versions" class="section shell">
+      <div class="section-head reveal">
         <div>
-          <small>VERSIONS</small>
-          <h2>Choisis ta plateforme</h2>
+          <span class="section-kicker">TÉLÉCHARGEMENTS</span>
+          <h2>Choisis ta version.</h2>
+          <p>Le site détecte ton appareil et te montre la meilleure option disponible.</p>
         </div>
-        <span id="releaseState">Vérification des versions…</span>
+        <div id="releaseState" class="release-pill"><i></i> Vérification des versions…</div>
       </div>
 
-      <div class="download-grid">
-        <article class="download-card featured">
-          <div class="platform-icon">▣</div>
-          <div class="card-copy">
-            <small>WINDOWS</small>
-            <h3>PaperTaPeur pour Windows</h3>
-            <p>Version bureau pour Windows 10 et 11.</p>
+      <div class="recommended-card reveal">
+        <div class="recommended-badge">RECOMMANDÉ POUR TOI</div>
+        <div class="recommended-icon" id="recommendedIcon">◎</div>
+        <div class="recommended-copy">
+          <small id="recommendedLabel">NAVIGATEUR</small>
+          <h3 id="recommendedTitle">Jouer dans le navigateur</h3>
+          <p id="recommendedText">Aucun téléchargement nécessaire. Lance PaperTaPeur immédiatement.</p>
+        </div>
+        <a id="recommendedButton" class="btn btn-primary compact" href="https://gabyy-1.github.io/PaperTaPeur/">JOUER →</a>
+      </div>
+
+      <div class="platform-grid">
+        <article class="platform-card featured reveal">
+          <div class="platform-top">
+            <span class="platform-icon windows">▦</span>
+            <span class="availability planned">BIENTÔT</span>
           </div>
-          <div class="card-meta"><span>.EXE</span><span>x64</span></div>
-          <a id="downloadWindows" class="download-button disabled" href="#" aria-disabled="true">INDISPONIBLE POUR L'INSTANT</a>
+          <small>WINDOWS</small>
+          <h3>Application Windows</h3>
+          <p>Version bureau dédiée pour Windows 10 et Windows 11, pensée pour le plein écran et les performances.</p>
+          <div class="tags"><span>.EXE</span><span>x64</span><span>PC</span></div>
+          <a id="downloadWindows" class="platform-action disabled" href="#" aria-disabled="true">EN PRÉPARATION</a>
         </article>
 
-        <article class="download-card">
-          <div class="platform-icon">◆</div>
-          <div class="card-copy">
-            <small>ANDROID</small>
-            <h3>PaperTaPeur pour Android</h3>
-            <p>Version installable pour téléphone et tablette Android.</p>
+        <article class="platform-card reveal delay-1">
+          <div class="platform-top">
+            <span class="platform-icon linux">⌘</span>
+            <span class="availability planned">BIENTÔT</span>
           </div>
-          <div class="card-meta"><span>.APK</span><span>Android</span></div>
-          <a id="downloadAndroid" class="download-button disabled" href="#" aria-disabled="true">INDISPONIBLE POUR L'INSTANT</a>
+          <small>LINUX</small>
+          <h3>Application Linux</h3>
+          <p>Une version portable prévue pour les distributions Linux modernes.</p>
+          <div class="tags"><span>.APPIMAGE</span><span>x64</span></div>
+          <a id="downloadLinux" class="platform-action disabled" href="#" aria-disabled="true">EN PRÉPARATION</a>
         </article>
 
-        <article class="download-card">
-          <div class="platform-icon">◈</div>
-          <div class="card-copy">
-            <small>LINUX</small>
-            <h3>PaperTaPeur pour Linux</h3>
-            <p>Application portable pour les distributions Linux modernes.</p>
+        <article class="platform-card reveal delay-2">
+          <div class="platform-top">
+            <span class="platform-icon mac">●</span>
+            <span class="availability planned">BIENTÔT</span>
           </div>
-          <div class="card-meta"><span>.APPIMAGE</span><span>x64</span></div>
-          <a id="downloadLinux" class="download-button disabled" href="#" aria-disabled="true">INDISPONIBLE POUR L'INSTANT</a>
+          <small>MACOS</small>
+          <h3>Application Mac</h3>
+          <p>Version macOS prévue pour les Mac compatibles.</p>
+          <div class="tags"><span>.DMG</span><span>MAC</span></div>
+          <a id="downloadMac" class="platform-action disabled" href="#" aria-disabled="true">EN PRÉPARATION</a>
         </article>
 
-        <article class="download-card">
-          <div class="platform-icon">●</div>
-          <div class="card-copy">
-            <small>MAC</small>
-            <h3>PaperTaPeur pour macOS</h3>
-            <p>Version bureau pour Mac Apple Silicon et Intel.</p>
+        <article class="platform-card browser featured-browser reveal">
+          <div class="platform-top">
+            <span class="platform-icon web">◎</span>
+            <span class="availability ready"><i></i> DISPONIBLE</span>
           </div>
-          <div class="card-meta"><span>.DMG</span><span>macOS</span></div>
-          <a id="downloadMac" class="download-button disabled" href="#" aria-disabled="true">INDISPONIBLE POUR L'INSTANT</a>
+          <small>NAVIGATEUR · PC</small>
+          <h3>Joue maintenant</h3>
+          <p>La version actuelle de PaperTaPeur. Pas d'installation : ouvre le jeu et lance ta partie.</p>
+          <div class="tags"><span>CHROME</span><span>EDGE</span><span>FIREFOX</span></div>
+          <a class="platform-action active" href="https://gabyy-1.github.io/PaperTaPeur/">OUVRIR LE JEU →</a>
         </article>
 
-        <article class="download-card">
-          <div class="platform-icon">⌁</div>
-          <div class="card-copy">
-            <small>IPHONE / IPAD</small>
-            <h3>PaperTaPeur sur iOS</h3>
-            <p>Installe l'application depuis Safari sur ton écran d'accueil.</p>
+        <article class="platform-card mobile-future reveal delay-1">
+          <div class="platform-top">
+            <span class="platform-icon android">◆</span>
+            <span class="availability separate">PROJET SÉPARÉ</span>
           </div>
-          <div class="card-meta"><span>PWA</span><span>iOS</span></div>
-          <a class="download-button available" href="https://gabyy-1.github.io/PaperTaPeur/">OUVRIR POUR INSTALLER</a>
+          <small>ANDROID</small>
+          <h3>Version mobile</h3>
+          <p>La version téléphone sera développée séparément pour avoir de vrais contrôles tactiles et une interface mobile dédiée.</p>
+          <div class="tags"><span>.APK</span><span>ANDROID</span></div>
+          <a id="downloadAndroid" class="platform-action disabled" href="#" aria-disabled="true">PLUS TARD</a>
         </article>
 
-        <article class="download-card browser-card">
-          <div class="platform-icon">◎</div>
-          <div class="card-copy">
-            <small>NAVIGATEUR</small>
-            <h3>Jouer sans téléchargement</h3>
-            <p>Chrome, Edge, Firefox, Safari et navigateurs mobiles.</p>
+        <article class="platform-card mobile-future reveal delay-2">
+          <div class="platform-top">
+            <span class="platform-icon ios">◇</span>
+            <span class="availability separate">PROJET SÉPARÉ</span>
           </div>
-          <div class="card-meta"><span>WEB</span><span>TOUS APPAREILS</span></div>
-          <a class="download-button available" href="https://gabyy-1.github.io/PaperTaPeur/">JOUER MAINTENANT</a>
+          <small>IPHONE / IPAD</small>
+          <h3>Version iOS</h3>
+          <p>Une version mobile adaptée est prévue plus tard, séparée du jeu navigateur PC actuel.</p>
+          <div class="tags"><span>IOS</span><span>MOBILE</span></div>
+          <span class="platform-action disabled">PLUS TARD</span>
         </article>
       </div>
     </section>
 
-    <section id="installation" class="install-section">
-      <div class="section-title">
-        <div>
-          <small>INSTALLATION</small>
-          <h2>Une seule progression partout</h2>
+    <section id="features" class="section features-section">
+      <div class="shell">
+        <div class="section-head centered reveal">
+          <div>
+            <span class="section-kicker">PAPERTAPEUR</span>
+            <h2>Simple à comprendre.<br>Difficile à maîtriser.</h2>
+            <p>Chaque sortie de ton territoire peut te faire gagner énormément… ou tout perdre.</p>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card large reveal">
+            <div class="feature-number">01</div>
+            <div class="feature-visual territory-visual">
+              <div class="tv-zone"></div>
+              <div class="tv-line"></div>
+              <div class="tv-paper"><i></i><i></i></div>
+            </div>
+            <div>
+              <small>CONQUÊTE</small>
+              <h3>Ferme la boucle.</h3>
+              <p>Sors de ta zone, trace ton chemin puis reconnecte-toi à ton territoire pour capturer tout l'espace encerclé.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal delay-1">
+            <div class="feature-number">02</div>
+            <div class="mini-rank">
+              <span>I</span><span>II</span><span>III</span><span>IV</span><span>V</span><span>VI</span><span>VII</span>
+            </div>
+            <small>COMPÉTITIF</small>
+            <h3>Monte les rangs.</h3>
+            <p>Bronze, Argent, Or, Platine, Diamant, Maître et Champion.</p>
+          </article>
+
+          <article class="feature-card reveal delay-2">
+            <div class="feature-number">03</div>
+            <div class="mode-stack">
+              <span>CLASSÉ</span><span>BLITZ</span><span>ÉLIMINATION</span><span>CONQUÊTE</span>
+            </div>
+            <small>MODES</small>
+            <h3>Change de rythme.</h3>
+            <p>Quatre façons de jouer, de la partie stratégique au combat sans seconde chance.</p>
+          </article>
+
+          <article class="feature-card wide reveal">
+            <div class="feature-number">04</div>
+            <div class="multiplayer-demo">
+              <div class="mp-user"><i style="--c:#ffd84d"></i><b>GabyY</b><small>HÔTE</small></div>
+              <div class="mp-link"></div>
+              <div class="mp-user"><i style="--c:#4ca8ff"></i><b>Player 2</b><small>PRÊT</small></div>
+              <div class="mp-link"></div>
+              <div class="mp-user"><i style="--c:#ff596f"></i><b>Player 3</b><small>PRÊT</small></div>
+            </div>
+            <div>
+              <small>MULTIJOUEUR PRIVÉ</small>
+              <h3>Crée ton salon. Partage ton code.</h3>
+              <p>Jusqu'à 8 joueurs dans le même salon privé, avec choix de la carte et du mode.</p>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="info-grid">
-        <div class="info-card"><b>01</b><h3>Télécharge</h3><p>Choisis la version correspondant à ton appareil.</p></div>
-        <div class="info-card"><b>02</b><h3>Connecte-toi</h3><p>Utilise ton compte PaperTaPeur pour retrouver ton profil.</p></div>
-        <div class="info-card"><b>03</b><h3>Joue</h3><p>Modes compétitifs, salons privés et classements par carte.</p></div>
+    </section>
+
+    <section id="installation" class="section shell">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">COMMENT JOUER</span>
+          <h2>Trois étapes. C'est tout.</h2>
+        </div>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <span>01</span>
+          <div class="step-icon">◎</div>
+          <h3>Ouvre PaperTaPeur</h3>
+          <p>Pour le moment, utilise la version navigateur sur ordinateur.</p>
+        </article>
+        <div class="step-line"></div>
+        <article class="step reveal delay-1">
+          <span>02</span>
+          <div class="step-icon">◇</div>
+          <h3>Choisis ton mode</h3>
+          <p>Sélectionne une carte, ton mode de jeu et ta couleur.</p>
+        </article>
+        <div class="step-line"></div>
+        <article class="step reveal delay-2">
+          <span>03</span>
+          <div class="step-icon yellow">▶</div>
+          <h3>Entre dans l'arène</h3>
+          <p>Capture le maximum de territoire et élimine tes adversaires.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section shell reveal">
+      <div class="cta-card">
+        <div class="cta-grid"></div>
+        <div>
+          <span class="section-kicker">PRÊT ?</span>
+          <h2>Ton territoire t'attend.</h2>
+          <p>La version navigateur PC est disponible maintenant.</p>
+        </div>
+        <a class="btn btn-primary big" href="https://gabyy-1.github.io/PaperTaPeur/">LANCER PAPERTAPEUR →</a>
+        <div class="cta-paper"><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section shell faq-section">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">FAQ</span>
+          <h2>Questions fréquentes.</h2>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <details class="reveal">
+          <summary>PaperTaPeur est-il gratuit ? <span>+</span></summary>
+          <p>Oui. La version navigateur actuelle est accessible gratuitement.</p>
+        </details>
+        <details class="reveal delay-1">
+          <summary>Pourquoi les boutons .exe et .dmg ne fonctionnent pas encore ? <span>+</span></summary>
+          <p>Les applications natives ne sont pas encore publiées. Dès qu'une vraie version sera ajoutée aux Releases GitHub de PaperTaPeur, le bouton correspondant s'activera automatiquement.</p>
+        </details>
+        <details class="reveal delay-2">
+          <summary>Et la version téléphone ? <span>+</span></summary>
+          <p>Elle sera développée dans un projet séparé afin d'avoir une interface et des contrôles réellement adaptés au tactile.</p>
+        </details>
+        <details class="reveal">
+          <summary>Le multijoueur existe déjà ? <span>+</span></summary>
+          <p>PaperTaPeur possède un système de salons privés prévu pour accueillir jusqu'à 8 joueurs.</p>
+        </details>
       </div>
     </section>
   </main>
 
   <footer>
-    <strong>PaperTaPeur</strong>
-    <span>Site officiel de téléchargement</span>
-    <a href="https://github.com/GabyY-1/PaperTaPeur">GitHub</a>
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <span class="brand-logo small"><i></i><i></i></span>
+        <div><strong>PaperTaPeur</strong><small>SITE OFFICIEL</small></div>
+      </div>
+      <p>Jeu de conquête de territoire compétitif.</p>
+      <div class="footer-links">
+        <a href="#versions">Versions</a>
+        <a href="#features">Jeu</a>
+        <a href="https://github.com/GabyY-1/PaperTaPeur">GitHub</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="app.js?v=1"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>
