@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="light">
   <title>PaperTaPeur — Site officiel</title>
   <meta name="description" content="Site officiel de PaperTaPeur : joue dans ton navigateur et retrouve les futures versions PC et mobile.">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <div class="page-bg" aria-hidden="true">
@@ -26,9 +26,9 @@
     </a>
 
     <nav class="desktop-nav" aria-label="Navigation principale">
+      <a href="#features">Le jeu</a>
       <a href="#versions">Versions</a>
-      <a href="#features">Fonctionnalités</a>
-      <a href="#installation">Installation</a>
+      <a href="#installation">Comment jouer</a>
       <a href="#faq">FAQ</a>
     </nav>
 
@@ -112,6 +112,51 @@
           <span class="tiny-icon yellow">▲</span>
           <div><small>PROGRESSION</small><strong>8 rangs · 22 divisions</strong></div>
         </div>
+      </div>
+    </section>
+
+    <section class="experience-section shell reveal">
+      <div class="experience-card">
+        <div class="experience-copy">
+          <span class="section-kicker">UNE PARTIE, TROIS DÉCISIONS</span>
+          <h2>Sortir. Fermer. Survivre.</h2>
+          <p>Chaque trajet hors de ta zone crée une trace vulnérable. Ferme ta boucle avant qu'un adversaire la coupe, puis recommence plus loin.</p>
+          <div class="experience-points">
+            <span><b>01</b> AGRANDIS TON TERRITOIRE</span>
+            <span><b>02</b> COUPE LES TRACES ENNEMIES</span>
+            <span><b>03</b> MONTE JUSQU'À TaPeur</span>
+          </div>
+        </div>
+        <div class="experience-board" aria-hidden="true">
+          <div class="exp-grid"></div>
+          <div class="exp-zone a"></div>
+          <div class="exp-zone b"></div>
+          <div class="exp-zone c"></div>
+          <div class="exp-trail"></div>
+          <div class="exp-paper"><i></i><i></i></div>
+          <div class="exp-cut">×</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rank-roadmap section shell reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">PROGRESSION COMPÉTITIVE</span>
+          <h2>De Bronze III à TaPeur.</h2>
+          <p>Une progression longue avec des sous-rangs, jusqu'au rang final à 25 000 RP.</p>
+        </div>
+        <div class="rank-total">22 DIVISIONS</div>
+      </div>
+      <div class="rank-track">
+        <article style="--rank:#b77948"><span>B</span><strong>Bronze</strong><small>0 RP</small></article>
+        <article style="--rank:#b9c3cb"><span>A</span><strong>Argent</strong><small>800 RP</small></article>
+        <article style="--rank:#f1bf36"><span>O</span><strong>Or</strong><small>2 200 RP</small></article>
+        <article style="--rank:#70d2cf"><span>P</span><strong>Platine</strong><small>4 200 RP</small></article>
+        <article style="--rank:#6fa8ff"><span>D</span><strong>Diamant</strong><small>7 000 RP</small></article>
+        <article style="--rank:#a66cff"><span>M</span><strong>Maître</strong><small>11 000 RP</small></article>
+        <article style="--rank:#ff5577"><span>C</span><strong>Champion</strong><small>16 000 RP</small></article>
+        <article class="rank-final" style="--rank:#ff2d55"><span>T</span><strong>TaPeur</strong><small>25 000 RP</small></article>
       </div>
     </section>
 
@@ -376,6 +421,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
